@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/get")
+@RequestMapping
 public class QuoteController {
 
     private final QuoteService quoteService;
@@ -22,7 +22,7 @@ public class QuoteController {
         this.quoteService = quoteService;
     }
 
-    @GetMapping("/save" )
+    @GetMapping("/saveFromSite" )
     @ResponseStatus(HttpStatus.OK)
     public void saveQuote() {
         quoteService.saveQuote();
