@@ -20,7 +20,6 @@ public class QuoteServiceImpl implements QuoteService {
         this.restTemplate = restTemplate;
     }
 
-
     @Override
     public void saveQuote() {
         Quote quote = restTemplate.getForEntity("http://extensions.biryudumkitap.com/quote", Quote.class).getBody();
